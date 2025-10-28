@@ -36,6 +36,14 @@ export default function Header() {
               Signup
             </Link>
           </li>
+          <li>
+            <Link
+              href='/dashboard'
+              className='hover:text-blue-400 transition-colors duration-300'
+            >
+              Dashboard
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
