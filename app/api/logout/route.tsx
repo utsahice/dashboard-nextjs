@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server'
 
 export async function POST(req: NextRequest) {
   const res = NextResponse.redirect(
-    new URL('/login', req.url || 'http://localhost:3000'),
+    new URL('/login', req.url || 'http://localhost:3000/login'),
   )
   res.cookies.set('user_email', '', { maxAge: 0, path: '/' }) // delete cookie
   return res
