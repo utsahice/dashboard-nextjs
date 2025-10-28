@@ -7,7 +7,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const router = useRouter()
-  async function handleSubmit(e) {
+  async function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
     const res = await fetch('/api', {
