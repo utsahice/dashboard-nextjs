@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export async function POST() {
-  const res = NextResponse.redirect(
-    new URL('/login', process.env.NEXT_PUBLIC_URL || 'http://localhost:3000'),
-  )
-  res.cookies.set('user_email', '', { maxAge: 0, path: '/' }) // delete cookie
-  return res
+export async function POST(req: NextRequest) {
+  const res = NextResponse.redirect(new URL('/login', req.url));
+  res.cookies.set('user_email', '', { maxAge: 0, path: '/' });
+
+  return res;
 }
