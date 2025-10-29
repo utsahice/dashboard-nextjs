@@ -17,7 +17,7 @@ export default function LoginPage() {
     })
 
     if (res.ok) {
-      router.push('/dashboard')
+      window.location.href = '/dashboard'
     }
   }
 
