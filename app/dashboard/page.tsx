@@ -13,7 +13,7 @@ export default async function Dashboard() {
           <p className='text-lg mb-6'>
             Logged in as: <span className='font-semibold'>{userEmail}</span>
           </p>
-          <form action='/api/logout' method='POST'>
+          <form action='/api/logout' method='GET'>
             <button
               type='submit'
               className='bg-red-600 text-white px-4 py-4 rounded-2xl'
